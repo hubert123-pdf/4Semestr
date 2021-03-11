@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="PAMSIProjekt1StrukturyDanych"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PAMSIProjekt1StrukturyDanych">
+				<Option output="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/PAMSIProjekt1StrukturyDanych" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 PAMSIProjekt1StrukturyDanych"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PAMSIProjekt1StrukturyDanych/fast">
+				<Option output="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/PAMSIProjekt1StrukturyDanych" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 PAMSIProjekt1StrukturyDanych/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/DT/list.h">
+			<Option target="PAMSIProjekt1StrukturyDanych"/>
+		</Unit>
+		<Unit filename="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/DT/queue.h">
+			<Option target="PAMSIProjekt1StrukturyDanych"/>
+		</Unit>
+		<Unit filename="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/DT/stack.h">
+			<Option target="PAMSIProjekt1StrukturyDanych"/>
+		</Unit>
+		<Unit filename="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/src/main.cpp">
+			<Option target="PAMSIProjekt1StrukturyDanych"/>
+		</Unit>
+		<Unit filename="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

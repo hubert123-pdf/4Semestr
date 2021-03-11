@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/src/main.cpp
+iostream
+-
+

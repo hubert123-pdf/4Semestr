@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/DT/list.h
+list
+-
+iostream
+-
+time.h
+-
+string
+-
+
+/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/DT/queue.h
+queue
+-
+iostream
+-
+
+/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/DT/stack.h
+stack
+-
+iostream
+-
+
+/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/src/main.cpp
+../include/DT/stack.h
+/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/DT/stack.h
+../include/DT/queue.h
+/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/DT/queue.h
+../include/DT/list.h
+/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/DT/list.h
+
