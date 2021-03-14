@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/main.cpp.o -o PAMSIProjekt1StrukturyDanych 
+/usr/bin/c++ CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/main.cpp.o CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/test_data_structures.cpp.o -o PAMSIProjekt1StrukturyDanych 

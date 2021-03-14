@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/TEST.dir/src/test_data_structures.cpp.o  -o TEST 

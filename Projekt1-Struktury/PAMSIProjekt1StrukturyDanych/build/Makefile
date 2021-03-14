@@ -75,17 +75,6 @@ CMAKE_BINARY_DIR = /home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProj
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/cmake/805/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -96,6 +85,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/snap/cmake/805/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -142,6 +142,19 @@ PAMSIProjekt1StrukturyDanych/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/build.make CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/build
 .PHONY : PAMSIProjekt1StrukturyDanych/fast
 
+#=============================================================================
+# Target rules for targets named TEST
+
+# Build rule for target.
+TEST: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TEST
+.PHONY : TEST
+
+# fast build rule for target.
+TEST/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEST.dir/build.make CMakeFiles/TEST.dir/build
+.PHONY : TEST/fast
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -169,6 +182,36 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/build.make CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/test_data_structures.o: src/test_data_structures.cpp.o
+
+.PHONY : src/test_data_structures.o
+
+# target to build an object file
+src/test_data_structures.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/build.make CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/test_data_structures.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEST.dir/build.make CMakeFiles/TEST.dir/src/test_data_structures.cpp.o
+.PHONY : src/test_data_structures.cpp.o
+
+src/test_data_structures.i: src/test_data_structures.cpp.i
+
+.PHONY : src/test_data_structures.i
+
+# target to preprocess a source file
+src/test_data_structures.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/build.make CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/test_data_structures.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEST.dir/build.make CMakeFiles/TEST.dir/src/test_data_structures.cpp.i
+.PHONY : src/test_data_structures.cpp.i
+
+src/test_data_structures.s: src/test_data_structures.cpp.s
+
+.PHONY : src/test_data_structures.s
+
+# target to generate assembly for a file
+src/test_data_structures.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/build.make CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/test_data_structures.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEST.dir/build.make CMakeFiles/TEST.dir/src/test_data_structures.cpp.s
+.PHONY : src/test_data_structures.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -178,9 +221,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... PAMSIProjekt1StrukturyDanych"
+	@echo "... TEST"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/test_data_structures.o"
+	@echo "... src/test_data_structures.i"
+	@echo "... src/test_data_structures.s"
 .PHONY : help
 
 

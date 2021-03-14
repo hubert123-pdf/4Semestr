@@ -1,7 +1,6 @@
 #include "../include/DT/stack.h"
 #include "../include/DT/queue.h"
 #include "../include/DT/list.h"
-
 int main()
 {
     int c;

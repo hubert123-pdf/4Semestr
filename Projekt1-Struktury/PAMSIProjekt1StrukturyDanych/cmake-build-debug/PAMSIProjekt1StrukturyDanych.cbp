@@ -93,7 +93,13 @@
 		<Unit filename="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/DT/stack.h">
 			<Option target="PAMSIProjekt1StrukturyDanych"/>
 		</Unit>
+		<Unit filename="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/data_structures/stack.hpp">
+			<Option target="PAMSIProjekt1StrukturyDanych"/>
+		</Unit>
 		<Unit filename="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/src/main.cpp">
+			<Option target="PAMSIProjekt1StrukturyDanych"/>
+		</Unit>
+		<Unit filename="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/src/test_data_structures.cpp">
 			<Option target="PAMSIProjekt1StrukturyDanych"/>
 		</Unit>
 		<Unit filename="/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/CMakeLists.txt">

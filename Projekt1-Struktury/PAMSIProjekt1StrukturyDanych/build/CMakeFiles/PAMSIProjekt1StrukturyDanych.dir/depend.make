@@ -4,5 +4,14 @@
 CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/main.cpp.o: ../include/DT/list.h
 CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/main.cpp.o: ../include/DT/queue.h
 CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/main.cpp.o: ../include/DT/stack.h
+CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/main.cpp.o: ../include/data_structures/stack.hpp
 CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/main.cpp.o: ../src/main.cpp
+
+CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/test_data_structures.cpp.o: ../include/catch2/catch.hpp
+CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/test_data_structures.cpp.o: ../include/data_structures/doubly_linked_list.hpp
+CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/test_data_structures.cpp.o: ../include/data_structures/heap.hpp
+CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/test_data_structures.cpp.o: ../include/data_structures/queue.hpp
+CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/test_data_structures.cpp.o: ../include/data_structures/singly_linked_list.hpp
+CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/test_data_structures.cpp.o: ../include/data_structures/stack.hpp
+CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/test_data_structures.cpp.o: ../src/test_data_structures.cpp
 

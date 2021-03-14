@@ -1,11 +1,10 @@
 #define CATCH_CONFIG_MAIN
-#include "catch2/catch.hpp"
-
-#include "data_structures/singly_linked_list.hpp"
-#include "data_structures/doubly_linked_list.hpp"
-#include "data_structures/queue.hpp"
-#include "data_structures/stack.hpp"
-#include "data_structures/heap.hpp"
+#include "../include/catch2/catch.hpp"
+#include "../include/data_structures/singly_linked_list.hpp"
+#include "../include/data_structures/doubly_linked_list.hpp"
+#include "../include/data_structures/queue.hpp"
+#include "../include/data_structures/stack.hpp"
+#include "../include/data_structures/heap.hpp"
 
 using namespace std::string_literals;
 
@@ -13,7 +12,7 @@ TEST_CASE("Stack/push")
 {
     Stack<int> stack;
 
-    stack.push(10);
+    stack.push(169);
     REQUIRE(stack.size() == 1);
 
     stack.push(20);

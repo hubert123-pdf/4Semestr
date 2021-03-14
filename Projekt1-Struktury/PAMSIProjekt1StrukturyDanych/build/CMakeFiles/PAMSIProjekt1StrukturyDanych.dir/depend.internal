@@ -5,4 +5,13 @@ CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/main.cpp.o
  /home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/DT/list.h
  /home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/DT/queue.h
  /home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/DT/stack.h
+ /home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/data_structures/stack.hpp
  /home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/src/main.cpp
+CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/test_data_structures.cpp.o
+ /home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/catch2/catch.hpp
+ /home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/data_structures/doubly_linked_list.hpp
+ /home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/data_structures/heap.hpp
+ /home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/data_structures/queue.hpp
+ /home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/data_structures/singly_linked_list.hpp
+ /home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/include/data_structures/stack.hpp
+ /home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/src/test_data_structures.cpp

@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/src/main.cpp" "/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/build/CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/main.cpp.o"
+  "/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/src/test_data_structures.cpp" "/home/hubert/pamsi-hubert-rudzik/Projekt1-Struktury/PAMSIProjekt1StrukturyDanych/build/CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/test_data_structures.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

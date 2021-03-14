@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/main.cpp.o"
+  "CMakeFiles/PAMSIProjekt1StrukturyDanych.dir/src/test_data_structures.cpp.o"
   "PAMSIProjekt1StrukturyDanych"
   "PAMSIProjekt1StrukturyDanych.pdb"
 )
