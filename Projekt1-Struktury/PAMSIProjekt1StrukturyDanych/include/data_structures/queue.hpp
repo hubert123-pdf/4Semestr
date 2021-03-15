@@ -1,10 +1,14 @@
 #ifndef QUEUE_HPP_
 #define QUEUE_HPP_
-
-// TODO: zaimplementuj klasę Queue - kolejka z implementacją tablicową cykliczną
+#define SIZE 10
 template <typename T>
 class Queue
 {
+    T *queue;
+    T *front_pointer;
+    T *back_pointer;
+    std::size_t size_q;
+    T numberOfElements;
   public:
     Queue();
     explicit Queue(std::size_t initialCapacity);
@@ -18,47 +22,87 @@ class Queue
 template <typename T>
 Queue<T>::Queue()
 {
-    // TODO: zaimplementuj
+    queue=new T[SIZE];
+    front_pointer=queue;
+    back_pointer=queue;
+    size_q=0;
+    numberOfElements=0;
+
 }
 
 template <typename T>
 Queue<T>::Queue(std::size_t initialCapacity)
 {
-    // TODO: zaimplementuj
+    queue=new T[initialCapacity];
+    front_pointer=queue;
+    back_pointer=queue;
+    numberOfElements=0;
+    size_q=0;
+
+
 }
 
 template <typename T>
 void Queue<T>::enqueue(const T& newElement)
 {
-    // TODO: zaimplementuj
+    /*   if(numberOfElements==++size_q)
+    {
+        size_q*=2;
+        T *array= new T[size_q];
+        for (int i=0;i<SIZE;i++)
+        {
+            array[i]=queue[i];
+        }
+        queue = new T[size_q];
+        for (int i=0;i<size_q;i++)
+        {
+            queue[i]=array[i];
+        }
+        back_pointer=&queue[size_q/2];
+        delete[] array;
+        numberOfElements++;
+    }
+
+    else*/
+    {
+        *back_pointer=newElement;
+        back_pointer++;
+        size_q++;
+        numberOfElements++;
+    }
+
 }
 
 template <typename T>
 T Queue<T>::dequeue()
 {
-    // TODO: zaimplementuj
-    return T();
-}
+    T value;
+    value=*front_pointer;
+    front_pointer++;
+    size_q--;
+    return value;
 
+}
 template <typename T>
 bool Queue<T>::empty()
 {
-    // TODO: zaimplementuj
-    return false;
+    if(front_pointer==back_pointer)
+        return true;
+    else
+        return false;
 }
 
 template <typename T>
 std::size_t Queue<T>::size()
 {
-    // TODO: zaimplementuj
-    return 0;
+    return size_q;
 }
 
 template <typename T>
 const T& Queue<T>::front()
 {
-    // TODO: zaimplementuj
     static T t;
+    t=*front_pointer;
     return t;
 }
 

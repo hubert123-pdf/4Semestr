@@ -12,7 +12,7 @@ TEST_CASE("Stack/push")
 {
     Stack<int> stack;
 
-    stack.push(169);
+    stack.push(10);
     REQUIRE(stack.size() == 1);
 
     stack.push(20);

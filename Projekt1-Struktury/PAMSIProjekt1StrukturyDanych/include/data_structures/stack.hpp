@@ -2,7 +2,6 @@
 #define STACK_HPP_
 #define SIZE 10
 
-// TODO: zaimplementuj klasę Stack - stos z implementacją tablicową
 template <typename T>
 class Stack
 {
@@ -10,14 +9,14 @@ class Stack
     T *pointer;
     T *stack;
     T numberOfElements;
-    T size_s;
+    size_t size_s;
   public:
     Stack();
     explicit Stack(std::size_t initialCapacity);
     void push(const T& newElement);
     T pop();
     bool empty();
-    T size();
+    std::size_t size();
     const T& top();
 };
 template <typename T>
@@ -32,7 +31,6 @@ template <typename T>
 Stack<T>::Stack(std::size_t initialCapacity)
 {
     numberOfElements=0;
-    // TODO: zaimplementuj - parametr to początkowa wielkość tablicy
     initialCapacity=SIZE;
     stack=new T[initialCapacity];
     pointer=&stack[0];
@@ -42,7 +40,6 @@ template <typename T>
 
 void Stack<T>::push(const T& newElement)
 {
-  // TODO: zaimplementuj
   if(numberOfElements==size_s)
   {
       size_s*=2;
@@ -72,7 +69,6 @@ void Stack<T>::push(const T& newElement)
 template <typename T>
 T Stack<T>::pop()
 {
-  // TODO: zaimplementuj
     static T t;
     if(numberOfElements!=0)
   {
@@ -88,23 +84,20 @@ T Stack<T>::pop()
 template <typename T>
 bool Stack<T>::empty()
 {
-    // TODO: zaimplementuj
     if(pointer==stack)
         return true;
     else
         return false;
 }
 template <typename T>
-T Stack<T>::size()
+std::size_t Stack<T>::size()
 {
-    // TODO: zaimplementuj
     return numberOfElements;
 }
 
 template <typename T>
 const T& Stack<T>::top()
 {
-    // TODO: zaimplementuj
     static T t;
     if(numberOfElements!=0)
     {
