@@ -6,10 +6,10 @@ template <typename T>
 class Stack
 {
   private:
-    T *pointer;
-    T *stack;
-    T numberOfElements;
-    size_t size_s;
+    T *pointer;             //pointer on the empty column
+    T *stack;               //stack as an array
+    T numberOfElements;     //number of the stored elements
+    size_t size_s;          //size of an array
   public:
     Stack();
     explicit Stack(std::size_t initialCapacity);
@@ -31,10 +31,9 @@ template <typename T>
 Stack<T>::Stack(std::size_t initialCapacity)
 {
     numberOfElements=0;
-    initialCapacity=SIZE;
     stack=new T[initialCapacity];
     pointer=&stack[0];
-    size_s=SIZE;
+    size_s=initialCapacity;
 }
 template <typename T>
 
@@ -44,7 +43,7 @@ void Stack<T>::push(const T& newElement)
   {
       size_s*=2;
       T *array= new T[size_s];
-          for (int i=0;i<SIZE;i++)
+          for (int i=0;i<size_s;i++)
           {
               array[i]=stack[i];
           }
@@ -56,6 +55,8 @@ void Stack<T>::push(const T& newElement)
       pointer=&stack[size_s/2];
       delete[] array;
       numberOfElements++;
+      *pointer = newElement;
+      pointer++;
   }
  else
 
