@@ -4,11 +4,12 @@
 template <typename T>
 class Queue
 {
-    T *queue;
-    T *front_pointer;
-    T *back_pointer;
-    std::size_t size_q;
-    T numberOfElements;
+    T *queue;               //array that stores elements
+    T *front_pointer;       //pointer on the first element
+    T *back_pointer;        //pointer on the last element
+    std::size_t size_q;     //number of the stored elements
+    T value;                //value of the current capacity
+    T last_capacity;        //value of the last used capacity (to prevent not necessary increase of an array)
   public:
     Queue();
     explicit Queue(std::size_t initialCapacity);
@@ -26,8 +27,6 @@ Queue<T>::Queue()
     front_pointer=queue;
     back_pointer=queue;
     size_q=0;
-    numberOfElements=0;
-
 }
 
 template <typename T>
@@ -36,39 +35,42 @@ Queue<T>::Queue(std::size_t initialCapacity)
     queue=new T[initialCapacity];
     front_pointer=queue;
     back_pointer=queue;
-    numberOfElements=0;
     size_q=0;
-
-
+    value=initialCapacity;
+    last_capacity=0;
 }
 
 template <typename T>
 void Queue<T>::enqueue(const T& newElement)
 {
-    /*   if(numberOfElements==++size_q)
+    //Increasing size of an array (X2)
+    if((size_q==value)  &&  (size_q!=last_capacity))
     {
-        size_q*=2;
-        T *array= new T[size_q];
-        for (int i=0;i<SIZE;i++)
+        last_capacity=value;
+        value*=2;
+        T *array= new T[value];
+        for (int i=0;i<value;i++)
         {
             array[i]=queue[i];
         }
-        queue = new T[size_q];
-        for (int i=0;i<size_q;i++)
+        queue = new T[value];
+        for (int i=0;i<value;i++)
         {
             queue[i]=array[i];
         }
-        back_pointer=&queue[size_q/2];
+        back_pointer=&queue[value/2];
+        queue[value/2];
+        front_pointer=&queue[0];
         delete[] array;
-        numberOfElements++;
+        *back_pointer=newElement;
+        back_pointer++;
+        size_q++;
     }
-
-    else*/
+else
     {
         *back_pointer=newElement;
         back_pointer++;
         size_q++;
-        numberOfElements++;
     }
 
 }
@@ -77,11 +79,14 @@ template <typename T>
 T Queue<T>::dequeue()
 {
     T value;
-    value=*front_pointer;
-    front_pointer++;
     size_q--;
+    back_pointer--;
+    value=*front_pointer;
+    for(int i=0;i<size_q+1;i++)
+    {
+        queue[i]=queue[i+1];
+    }
     return value;
-
 }
 template <typename T>
 bool Queue<T>::empty()
@@ -105,5 +110,4 @@ const T& Queue<T>::front()
     t=*front_pointer;
     return t;
 }
-
 #endif /* QUEUE_HPP_ */
