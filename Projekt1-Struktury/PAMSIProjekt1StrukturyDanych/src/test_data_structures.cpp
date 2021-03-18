@@ -190,7 +190,7 @@ TEST_CASE("SinglyLinkedList/remove")
     list.addBack(10);
     REQUIRE(list.size()==3);
     list.remove(10);
-    REQUIRE(list.size()==1);
+    REQUIRE(list.size()==2);
 }
 
 
