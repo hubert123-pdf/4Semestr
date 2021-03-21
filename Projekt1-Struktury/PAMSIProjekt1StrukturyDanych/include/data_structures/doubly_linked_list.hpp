@@ -136,11 +136,32 @@ void DoublyLinkedList<T>::insert(const T& newElement, int index)
     new_node->prev=prevNode;       // prev pointer is pointing at the previous Node
     prevNode->next=new_node;
     new_node->next=nextNode;
+    nextNode->prev=head;
 }
 template <typename T>
 void DoublyLinkedList<T>::remove(const T& element)
 {
-    size_l--;
+
+    for(int i=0;i<=size_l;i++)
+    {
+        if(head->Data==element)
+        {
+            DLNode *prevNode=new DLNode;
+            DLNode *nextNode=new DLNode;
+            prevNode=head;
+            nextNode=head;
+            for(int j=0;j<i-1;j++)
+                prevNode=prevNode->next;
+            for(int j=0;j<i;j++)
+                nextNode=nextNode->next;
+            head->prev=prevNode;
+            prevNode->next=head;
+            head->next=nextNode;
+            nextNode->prev=head;
+            size_l--;
+        }
+        head=head->next;
+    }
 }
 
 template <typename T>

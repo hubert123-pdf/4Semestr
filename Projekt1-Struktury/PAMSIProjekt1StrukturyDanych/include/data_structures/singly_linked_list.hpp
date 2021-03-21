@@ -7,7 +7,7 @@ class SinglyLinkedList
     struct Node
     {
         T Data;                 //Stored data
-        struct Node* next;      //Pointer to the new Node
+        Node* next;             //Pointer to the new Node
     };
     Node *head=NULL;            //Pointer to the first Node
     Node *tail=NULL;            //Pointer to the last Node
@@ -60,7 +60,6 @@ void SinglyLinkedList<T>::addFront(const T& newElement)
 template <typename T>
 void SinglyLinkedList<T>::removeFront()
 {
-    // TODO: zaimplementuj
     if(size_l!=0)
     {
         if(size_l>1)
@@ -94,9 +93,9 @@ void SinglyLinkedList<T>::addBack(const T& newElement)
 template <typename T>
 void SinglyLinkedList<T>::removeBack()
 {
-    // TODO: zaimplementuj
     for(int i;i<size_l-1;i++)
         head=head->next;
+    head->next=NULL;
     tail_val=head->Data;
     size_l--;
 }
@@ -137,7 +136,24 @@ void SinglyLinkedList<T>::insert(const T& newElement, int index)
 template <typename T>
 void SinglyLinkedList<T>::remove(const T& element)
 {
-    size_l--;
+    for(int i=0;i<=size_l;i++)
+    {
+        if(head->Data==element)
+        {
+            Node *prevNode=new Node;
+            Node *nextNode=new Node;
+            prevNode=head;
+            nextNode=head;
+            for(int j=0;j<i-1;j++)
+                prevNode=prevNode->next;
+            for(int j=0;j<i;j++)
+                nextNode=nextNode->next;
+            prevNode->next=head;
+            head->next=nextNode;
+            size_l--;
+        }
+        head=head->next;
+    }
 }
 
 template <typename T>
