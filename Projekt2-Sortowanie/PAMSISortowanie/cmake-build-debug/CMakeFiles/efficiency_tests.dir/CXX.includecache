@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hubert/pamsi-hubert-rudzik/Projekt2-Sortowanie/PAMSISortowanie/include/algorithms/mergesort.h
+vector
+-
+time.h
+-
+stdlib.h
+-
+
+/home/hubert/pamsi-hubert-rudzik/Projekt2-Sortowanie/PAMSISortowanie/src/main.cpp
+iostream
+-
+../include/algorithms/mergesort.h
+/home/hubert/pamsi-hubert-rudzik/Projekt2-Sortowanie/PAMSISortowanie/include/algorithms/mergesort.h
+cstdio
+-
+ctime
+-
+

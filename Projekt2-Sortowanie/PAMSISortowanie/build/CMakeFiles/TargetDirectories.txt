@@ -1,0 +1,4 @@
+/home/hubert/pamsi-hubert-rudzik/Projekt2-Sortowanie/PAMSISortowanie/build/CMakeFiles/rebuild_cache.dir
+/home/hubert/pamsi-hubert-rudzik/Projekt2-Sortowanie/PAMSISortowanie/build/CMakeFiles/edit_cache.dir
+/home/hubert/pamsi-hubert-rudzik/Projekt2-Sortowanie/PAMSISortowanie/build/CMakeFiles/efficiency_tests.dir
+/home/hubert/pamsi-hubert-rudzik/Projekt2-Sortowanie/PAMSISortowanie/build/CMakeFiles/test_sorting_algorithms.dir
