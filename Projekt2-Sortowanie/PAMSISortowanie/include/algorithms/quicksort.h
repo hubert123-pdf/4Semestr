@@ -10,20 +10,21 @@ template <typename T>
 class QuickSort
 {
     std::vector<T> tab;
-    T capacity;
+    T N;
 public:
     void sort(T start,T end);
     T partition(T start,T end);
     QuickSort(size_t Capacity);
     std::vector<T> getTab();
-    void setRandom();
+    void setRandom(T n);
     void printTab();
+    void setRandomLeft();
+    void reverse();
 };
 template <typename T>
 QuickSort<T>::QuickSort(size_t capacity)
 {
     tab.resize(capacity);
-    this->capacity=capacity;
 }
 template <typename T>
 void QuickSort<T>::sort(T start, T end) {
@@ -60,17 +61,33 @@ T QuickSort<T>::partition(T start, T end) {
     return  ++i;
 }
 template <typename T>
-void QuickSort<T>::setRandom()
+void QuickSort<T>::setRandom(T n)
 {
+    this->N=n;
     srand(time(NULL));
-    for(int i=0;i<capacity;i++)
+    for(int i=0;i<N;i++)
     {
-        tab[i]=std::rand()%100;
+        tab[i]=std::rand()%1000;
     }
+}
+template <typename T>
+void QuickSort<T>::setRandomLeft() {
+    srand(time(NULL));
+    for(int i=N+1;i<tab.size();i++)
+        tab[i]=std::rand()%1000+1000;
 }
 template<typename T>
 void QuickSort<T>::printTab(){
     for(auto &v:tab)
         std::cout<<v<<std::endl;
+}
+template <typename T>
+void QuickSort<T>::reverse(){
+        for(int i=0;i<tab.size()/2;i++)
+        {
+            T k=tab[i];
+            tab[i]=tab[tab.size()-i];
+            tab[tab.size()-i]=k;
+        }
 }
 #endif //SORTING_ALGORITHMS_QUICKSORT_H
