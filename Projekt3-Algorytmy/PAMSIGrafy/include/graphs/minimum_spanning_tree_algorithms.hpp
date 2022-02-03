@@ -1,19 +1,19 @@
 #ifndef MINIMUM_SPANNING_TREE_ALGORITHMS_HPP_
 #define MINIMUM_SPANNING_TREE_ALGORITHMS_HPP_
 
-#include "graphs/graph.hpp"
+#include "graph.hpp"
 #include <vector>
 
-struct MinimumSpanningEdge{
-    int v1;
-    int v2;
-    int weight;
-};
+#include <stdio.h>
 
-using MinimumSpanningTreeResult = std::vector<MinimumSpanningEdge>;
+ 
 
+int find(int parent[], int i);
+void Union(int parent[], int x, int y);
+bool  isCycle(MinimumSpanningTreeResult tree,int n);
 void kruskal(Graph& graph, MinimumSpanningTreeResult& result);
 void prim(Graph& graph, MinimumSpanningTreeResult& result);
 
+void printMST(MinimumSpanningTreeResult& tree);
 #endif /* MINIMUM_SPANNING_TREE_ALGORITHMS_HPP_ */
 

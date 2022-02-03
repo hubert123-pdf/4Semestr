@@ -3,15 +3,22 @@
 
 #include <memory>
 
-#include "graphs/graph.hpp"
+#include "graph.hpp"
 
 class AdjacencyMatrixGraph : public Graph
 {
 
+  unsigned num_of_vertexes,num_of_edges;
+  int **matrix;
+  std::priority_queue<MinimumSpanningEdge,MinimumSpanningTreeResult,compareWeight > pqueue;
   public:
-    // TODO: implement
-
-    static std::unique_ptr<Graph> createGraph(std::istream& is);
+  const int getEdgeWeight(int i,int j) const;
+  const int getNumOfVertexes() const{ return num_of_vertexes; }
+  const int getNumOfEdges() const{ return num_of_edges; }
+  const MinimumSpanningEdge getTopQueue() const{   return pqueue.top(); }
+  void popTopQueue() {   pqueue.pop(); }
+  std::ostream& operator <<(std::ostream &Strm);
+  static std::unique_ptr<Graph> createGraph(std::istream& is);
 };
 
 #endif /* ADJACENCY_MATRIX_GRAPH_HPP_ */
