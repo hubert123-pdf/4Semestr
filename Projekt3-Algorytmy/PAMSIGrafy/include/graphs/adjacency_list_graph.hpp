@@ -16,6 +16,8 @@ class AdjacencyListGraph : public Graph
   const int getNumOfEdges() const{ return num_of_edges; }
   const MinimumSpanningEdge getTopQueue() const{   return pqueue.top(); }
   void popTopQueue() {   pqueue.pop(); }
+  std::priority_queue<MinimumSpanningEdge,MinimumSpanningTreeResult,compareWeight> getAllEdgesPossibleEdgesOfTree(bool possible[]);
+
   std::ostream& operator <<(std::ostream &Strm);
   static std::unique_ptr<Graph> createGraph(std::istream& is);
 };

@@ -17,8 +17,27 @@ void kruskal(Graph& graph, MinimumSpanningTreeResult& result)
 
 void prim(Graph& graph, MinimumSpanningTreeResult& result)
 {
-    // TODO: implement
+    priority_queue pq;
+    int n=graph.getNumOfVertexes();
+    bool possible[n]={false};  
+    possible[0]=true;  
+    while(result.size()<n-1)
+    {
+        pq=graph.getAllEdgesPossibleEdgesOfTree(possible);
+        while(!pq.empty()){
+            if(!isInTree(result,pq.top().v2))
+            {
+                result.push_back(pq.top());
+                possible[pq.top().v2]=true;
+                break;
+            }
+            pq.pop();
+        }
+    }
 }
+
+
+
 
 int find(int parent[], int i)
 {
@@ -58,4 +77,15 @@ void printMST(MinimumSpanningTreeResult& tree)
         std::cout<<tree[i].v1<<" "<<tree[i].v2<<" "<<tree[i].weight<<"\n";
     }
     
+}
+bool isInTree(MinimumSpanningTreeResult result,int x)
+{
+    for (int i = 0; i < result.size(); i++)
+    {
+        if (result[i].v1==x || result[i].v2==x)
+        {
+            return true;
+        }   
+    }
+    return false;
 }

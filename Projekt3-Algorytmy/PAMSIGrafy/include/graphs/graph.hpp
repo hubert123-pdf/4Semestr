@@ -22,6 +22,7 @@ struct  compareWeight
     }
 };
 using MinimumSpanningTreeResult = std::vector<MinimumSpanningEdge>;
+typedef std::priority_queue<MinimumSpanningEdge,MinimumSpanningTreeResult,compareWeight> priority_queue;
 
 class Graph
 {
@@ -32,6 +33,8 @@ class Graph
   virtual std::ostream& operator <<(std::ostream &Strm)=0;
   virtual const MinimumSpanningEdge getTopQueue()const=0;
   virtual void popTopQueue()=0;
+  virtual  std::priority_queue<MinimumSpanningEdge,MinimumSpanningTreeResult,compareWeight> getAllEdgesPossibleEdgesOfTree(bool possible[])=0;
+
 };
 
 #endif /* GRAPH_HPP_ */

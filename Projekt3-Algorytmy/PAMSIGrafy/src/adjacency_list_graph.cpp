@@ -49,3 +49,23 @@ const int AdjacencyListGraph::getEdgeWeight(int i,int j) const
     }
     return iter->second;
 }
+
+std::priority_queue<MinimumSpanningEdge,MinimumSpanningTreeResult,compareWeight> AdjacencyListGraph::getAllEdgesPossibleEdgesOfTree(bool possible[])
+{
+    std::priority_queue<MinimumSpanningEdge,MinimumSpanningTreeResult,compareWeight> queue;
+    std::list<std::pair<int,int>>::iterator iter;
+    for (int i = 0; i < num_of_vertexes; i++)
+    {
+        if(possible[i]){
+            for ( iter=list[i].begin(); iter!=list[i].end(); iter++)
+            {
+                MinimumSpanningEdge new_edge;
+                new_edge.v1=i;
+                new_edge.v2=iter->first;
+                new_edge.weight=iter->second;
+                queue.push(new_edge);
+            }
+        }
+    }
+    return queue;
+}

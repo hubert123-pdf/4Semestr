@@ -12,8 +12,9 @@ int main(int argc, char* argv[])
     plik.open("../mst_data/graph/graphV10D0.5.txt",std::ifstream::in);
     //auto graph=AdjacencyListGraph::createGraph(plik);
     std::unique_ptr<Graph> graph=AdjacencyMatrixGraph::createGraph(plik);
-    graph->operator<<(std::cout);
-    kruskal(*graph,tree);
+    //graph->operator<<(std::cout);
+    //kruskal(*graph,tree);
+    prim(*graph,tree);
     printMST(tree);
     return 0;
 }

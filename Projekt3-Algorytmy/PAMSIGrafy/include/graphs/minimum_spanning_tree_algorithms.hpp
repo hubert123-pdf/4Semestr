@@ -10,7 +10,8 @@
 
 int find(int parent[], int i);
 void Union(int parent[], int x, int y);
-bool  isCycle(MinimumSpanningTreeResult tree,int n);
+bool isCycle(MinimumSpanningTreeResult tree,int n);
+bool isInTree(MinimumSpanningTreeResult result,int x);
 void kruskal(Graph& graph, MinimumSpanningTreeResult& result);
 void prim(Graph& graph, MinimumSpanningTreeResult& result);
 

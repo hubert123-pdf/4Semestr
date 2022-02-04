@@ -41,3 +41,23 @@ const int AdjacencyMatrixGraph::getEdgeWeight(int i,int j) const
 {
     return matrix[i][j];
 }
+std::priority_queue<MinimumSpanningEdge,MinimumSpanningTreeResult,compareWeight> AdjacencyMatrixGraph::getAllEdgesPossibleEdgesOfTree(bool possible[])
+{
+    std::priority_queue<MinimumSpanningEdge,MinimumSpanningTreeResult,compareWeight> queue;
+    for (int i = 0; i < num_of_vertexes; i++)
+    {
+        if(possible[i]){
+            for (int j = 0; j < num_of_vertexes; j++)
+            {
+                if(matrix[i][j]!=0){
+                    MinimumSpanningEdge edge;
+                    edge.v1=i;
+                    edge.v2=j;
+                    edge.weight=matrix[i][j];
+                    queue.push(edge);
+                }
+            }
+        }
+    }
+    return queue;
+}
