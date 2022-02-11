@@ -20,9 +20,8 @@ std::unique_ptr<Graph> AdjacencyMatrixGraph::createGraph(std::istream& is)
         unsigned start,end;
         getline(is,str);
         std::istringstream iss2(str);
-        iss2 >> start;
+        iss2 >> start>> end >> cost;
         if(iss2){
-            iss2 >> end >> cost;
             new_edge.v1=start;
             new_edge.v2=end;
             new_edge.weight=cost;

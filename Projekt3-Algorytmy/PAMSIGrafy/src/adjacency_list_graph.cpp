@@ -15,9 +15,8 @@ std::unique_ptr<Graph> AdjacencyListGraph::createGraph(std::istream& is)
         MinimumSpanningEdge new_edge;
         std::pair<int,int> node;
         unsigned start;
-        iss2>> start;
+        iss2>> start>> node.first >> node.second;
         if(iss2){
-            iss2>> node.first >> node.second;
             new_edge.v1=start;
             new_edge.v2=node.first;
             new_edge.weight=node.second;

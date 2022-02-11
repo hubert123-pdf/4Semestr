@@ -32,18 +32,18 @@ void dijkstra(Graph& graph, int sourceIndex, ShortestPathResult& result)
                    result[i].first = result[vertex].first + graph.getEdgeValue(vertex, i);
                    result[i].second=result[vertex].second;
                    result[i].second.push_back(vertex);
-                   for (int j = 0; j < Q.size(); j++)
+                   for (auto j : Q)
                    {
-                       if(Q[j].second==i)
-                       Q[j].first=result[i].first;
+                        if(Q[j.second].second==i)
+                            Q[j.second].first=result[i].first;
                    }  
                 }
-            }   
-            else if(vertex==i)
-            result[i].second.push_back(vertex);
-
+            }
         }
-
+    }
+    for (auto i : result)
+    {
+        result[i.first].second.push_back(i.first);
     }
 }
 
