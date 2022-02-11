@@ -6,7 +6,7 @@
 #include <map>
 #include <utility>
 #include <vector>
-
+#include <algorithm>
 /*
  * Klucz slownika to indeks wierzchołka końcowego
  * Wartość to std::pair, która zawiera:
@@ -17,5 +17,5 @@ using ShortestPathResult = std::map<int, std::pair<int, std::vector<int>>>;
 
 void dijkstra(Graph& graph, int sourceIndex, ShortestPathResult& result);
 bool bellmanFord(Graph& graph, int sourceIndex, ShortestPathResult& result);
-
+void printSHR(ShortestPathResult SHR);
 #endif /* SHORTEST_PATH_ALGORITHMS_HPP_ */

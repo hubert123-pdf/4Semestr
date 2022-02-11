@@ -40,7 +40,6 @@ void readShortestPathResult(std::istream& is, ShortestPathResult& result)
                     vertices.push_back(vertexIndex);
                 }
             }
-
             result[endVertexIndex] = std::make_pair(cost, vertices);
         }
     }

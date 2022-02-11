@@ -18,12 +18,21 @@ std::unique_ptr<Graph> AdjacencyMatrixGraph::createGraph(std::istream& is)
         MinimumSpanningEdge new_edge;
         int cost;
         unsigned start,end;
-        is >> start >> end >> cost;
-        new_edge.v1=start;
-        new_edge.v2=end;
-        new_edge.weight=cost;
-        AMGraph.pqueue.push(new_edge);
-        AMGraph.matrix[start][end]=cost;
+        getline(is,str);
+        std::istringstream iss2(str);
+        iss2 >> start;
+        if(iss2){
+            iss2 >> end >> cost;
+            new_edge.v1=start;
+            new_edge.v2=end;
+            new_edge.weight=cost;
+            AMGraph.pqueue.push(new_edge);
+            AMGraph.matrix[start][end]=cost;
+        }
+        else
+        {
+            AMGraph.dijkstra_start=start;
+        }
     }
     return std::make_unique<AdjacencyMatrixGraph>(AMGraph);
 }
@@ -36,10 +45,6 @@ std::ostream& AdjacencyMatrixGraph::operator<<(std::ostream &Strm)
         Strm<<"\n";
     }
     return Strm;
-}
-const int AdjacencyMatrixGraph::getEdgeWeight(int i,int j) const 
-{
-    return matrix[i][j];
 }
 std::priority_queue<MinimumSpanningEdge,MinimumSpanningTreeResult,compareWeight> AdjacencyMatrixGraph::getAllEdgesPossibleEdgesOfTree(bool possible[])
 {
@@ -60,4 +65,12 @@ std::priority_queue<MinimumSpanningEdge,MinimumSpanningTreeResult,compareWeight>
         }
     }
     return queue;
+}
+
+bool AdjacencyMatrixGraph::vertexIsNeighbour(int x, int y)
+{
+  if(matrix[x][y]!=0){
+      return true;
+  }
+  return false;
 }

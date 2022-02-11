@@ -27,10 +27,12 @@ typedef std::priority_queue<MinimumSpanningEdge,MinimumSpanningTreeResult,compar
 class Graph
 {
   public:
-  virtual const int getEdgeWeight(int i,int j) const=0;
   virtual const int getNumOfVertexes()const =0;
   virtual const int getNumOfEdges() const =0;
+  virtual const int getSourceIndex() const =0;
+  virtual bool vertexIsNeighbour(int x, int y)=0;
   virtual std::ostream& operator <<(std::ostream &Strm)=0;
+  virtual int getEdgeValue(int x, int y)=0;
   virtual const MinimumSpanningEdge getTopQueue()const=0;
   virtual void popTopQueue()=0;
   virtual  std::priority_queue<MinimumSpanningEdge,MinimumSpanningTreeResult,compareWeight> getAllEdgesPossibleEdgesOfTree(bool possible[])=0;
