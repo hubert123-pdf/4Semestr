@@ -1,0 +1,6 @@
+build
+mst_data
+sp_data
+CMakeLists.txt
+.vscode
+*.exe

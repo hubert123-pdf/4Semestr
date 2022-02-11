@@ -28,22 +28,25 @@ void dijkstra(Graph& graph, int sourceIndex, ShortestPathResult& result)
         {
             if (graph.vertexIsNeighbour(vertex,i))
             {
-                if(result[i].first > result[vertex].first + graph.getEdgeValue(vertex, i)){
+                if(result[i].first > result[vertex].first + graph.getEdgeValue(vertex, i))
+                {
                    result[i].first = result[vertex].first + graph.getEdgeValue(vertex, i);
                    result[i].second=result[vertex].second;
                    result[i].second.push_back(vertex);
-                   for (auto j : Q)
+                   for (auto &j : Q)
                    {
-                        if(Q[j.second].second==i)
-                            Q[j.second].first=result[i].first;
+                        if(j.second==i)
+                        {
+                            j.first=result[i].first;
+                        }
                    }  
                 }
             }
         }
     }
-    for (auto i : result)
+    for (auto &i : result)
     {
-        result[i.first].second.push_back(i.first);
+        i.second.second.push_back(i.first);
     }
 }
 

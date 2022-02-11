@@ -3,7 +3,7 @@ project(graph_algorithms)
 
 set (CMAKE_CXX_STANDARD 17)
 
-add_library(graph_algorithms_lib src/adjacency_list_graph.cpp src/adjacency_matrix_graph.cpp)
+add_library(graph_algorithms_lib src/adjacency_list_graph.cpp src/adjacency_matrix_graph.cpp src/minimum_spanning_tree_algorithms.cpp src/shortest_path_algorithms.cpp)
 target_include_directories(graph_algorithms_lib PUBLIC include/)
 
 add_executable(test_graphs
@@ -19,3 +19,4 @@ target_compile_definitions(test_mst PUBLIC DATA_DIR_PATH="${CMAKE_CURRENT_SOURCE
 add_executable(efficiency_tests
         src/main.cpp)
 target_link_libraries(efficiency_tests graph_algorithms_lib)
+target_compile_definitions(efficiency_tests PUBLIC DATA_DIR_PATH="${CMAKE_CURRENT_SOURCE_DIR}/mst_data/graph")

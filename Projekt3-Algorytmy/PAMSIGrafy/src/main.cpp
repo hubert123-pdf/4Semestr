@@ -11,14 +11,15 @@ int main(int argc, char* argv[])
     MinimumSpanningTreeResult tree;
     ShortestPathResult path;
     std::ifstream plik;
-    plik.open("../mst_data/graph/graphV10D0.5.txt",std::ifstream::in);
+    plik.open("../sp_data/graph/graphV10D0.5.txt",std::ifstream::in);
     auto graph=AdjacencyListGraph::createGraph(plik);
     //std::unique_ptr<Graph> graph=AdjacencyMatrixGraph::createGraph(plik);
     //graph->operator<<(std::cout);
     //kruskal(*graph,tree);
-    prim(*graph,tree);
-    //dijkstra(*graph,graph->getSourceIndex(),path);
-    //printSHR(path);
-    printMST(tree);
+    //prim(*graph,tree);
+    //printMST(tree);
+
+    dijkstra(*graph,graph->getSourceIndex(),path);
+    printSHR(path);
     return 0;
 }
